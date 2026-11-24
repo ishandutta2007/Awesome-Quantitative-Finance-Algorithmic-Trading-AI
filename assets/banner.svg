@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glow & Gradient Definitions -->
+    <linearGradient id="teal-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <linearGradient id="gold-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+    .tag-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+    .metric-val {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      fill: #f8fafc;
+    }
+    .metric-lbl {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      fill: #64748b;
+    }
+
+    /* Dynamic Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.03); }
+    }
+    @keyframes dashMove {
+      from { stroke-dashoffset: 600; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes barFloat1 {
+      0%, 100% { height: 42px; y: 318px; }
+      50% { height: 68px; y: 292px; }
+    }
+    @keyframes barFloat2 {
+      0%, 100% { height: 75px; y: 285px; }
+      50% { height: 50px; y: 310px; }
+    }
+    @keyframes barFloat3 {
+      0%, 100% { height: 95px; y: 265px; }
+      50% { height: 115px; y: 245px; }
+    }
+    @keyframes signalPulse {
+      0% { r: 4px; opacity: 1; }
+      100% { r: 16px; opacity: 0; }
+    }
+    @keyframes tickerFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .pulse-bg {
+      animation: pulseGlow 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .stock-line {
+      stroke-dasharray: 8, 4;
+      animation: dashMove 30s linear infinite;
+    }
+    .bar-1 { animation: barFloat1 4s ease-in-out infinite; }
+    .bar-2 { animation: barFloat2 5s ease-in-out infinite; }
+    .bar-3 { animation: barFloat3 4.5s ease-in-out infinite; }
+    .live-ping { animation: signalPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+    .card-float { animation: tickerFloat 4s ease-in-out infinite; }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="400" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Subtle Grid Pattern in Background -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="160" x2="1200" y2="160" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="320" x2="1200" y2="320" />
+    <line x1="200" y1="0" x2="200" y2="400" />
+    <line x1="400" y1="0" x2="400" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="400" />
+    <line x1="800" y1="0" x2="800" y2="400" />
+    <line x1="1000" y1="0" x2="1000" y2="400" />
+  </g>
+
+  <!-- Ambient Glowing Orbs (in background) -->
+  <circle cx="1020" cy="120" r="130" fill="#06b6d4" opacity="0.18" filter="url(#neon-glow)" class="pulse-bg" />
+  <circle cx="200" cy="350" r="100" fill="#6366f1" opacity="0.12" filter="url(#neon-glow)" class="pulse-bg" />
+
+  <!-- Dynamic Stock & Volatility Chart Lines (Background Decorative Accent) -->
+  <g opacity="0.45">
+    <!-- Moving average curve -->
+    <path d="M 680,340 Q 760,310 840,325 T 960,250 T 1080,210 T 1180,160" 
+          fill="none" stroke="#10b981" stroke-width="3" filter="url(#subtle-glow)" />
+    <!-- Oscillating signal wave -->
+    <path class="stock-line" d="M 650,350 Q 720,270 800,310 T 940,220 T 1070,260 T 1190,140" 
+          fill="none" stroke="#38bdf8" stroke-width="2" />
+  </g>
+
+  <!-- Animated Dynamic Volume Bars (Bottom Right) -->
+  <g opacity="0.5">
+    <rect class="bar-1" x="880" y="318" width="12" height="42" rx="3" fill="#10b981" opacity="0.7"/>
+    <rect class="bar-2" x="904" y="285" width="12" height="75" rx="3" fill="#06b6d4" opacity="0.7"/>
+    <rect class="bar-3" x="928" y="265" width="12" height="95" rx="3" fill="#6366f1" opacity="0.7"/>
+    <rect class="bar-1" x="952" y="300" width="12" height="60" rx="3" fill="#10b981" opacity="0.7"/>
+    <rect class="bar-2" x="976" y="270" width="12" height="90" rx="3" fill="#38bdf8" opacity="0.7"/>
+    <rect class="bar-3" x="1000" y="250" width="12" height="110" rx="3" fill="#10b981" opacity="0.8"/>
+  </g>
+
+  <!-- Dynamic Animated Metric Card (Top Right - safe area, foreground elements kept clean) -->
+  <g class="card-float" transform="translate(860, 48)">
+    <rect width="280" height="92" rx="14" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" filter="url(#subtle-glow)" />
+    <!-- Live status pill -->
+    <circle cx="28" cy="28" r="5" fill="#10b981" />
+    <circle class="live-ping" cx="28" cy="28" r="5" fill="#10b981" />
+    <text x="42" y="32" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#10b981" letter-spacing="0.5">AI ALPHA SIGNAL: ACTIVE</text>
+    <text class="metric-val" x="26" y="68">Sharpe 3.42</text>
+    <text class="metric-lbl" x="135" y="68">Max DD: -4.1%</text>
+    <text class="metric-val" x="215" y="68" fill="#10b981">↑ 28.6%</text>
+  </g>
+
+  <!-- Dynamic Secondary Metric Card -->
+  <g class="card-float" transform="translate(860, 154)" style="animation-delay: -2s;">
+    <rect width="280" height="78" rx="14" fill="url(#card-grad)" stroke="#1e293b" stroke-width="1.5" />
+    <text class="tag-text" x="22" y="28">⚡ HIGH-FREQUENCY ENGINE</text>
+    <text class="metric-val" x="22" y="58">&lt; 12μs Latency</text>
+    <text class="metric-lbl" x="160" y="58">Execution • Rust &amp; DRL</text>
+  </g>
+
+  <!-- FOREGROUND BRANDING / HEADER SECTION (Crisp, Unobstructed, High Contrast) -->
+  <g transform="translate(70, 75)">
+    <!-- Category Pill Badge -->
+    <rect width="245" height="30" rx="15" fill="#0f2b38" stroke="#0284c7" stroke-width="1.2" />
+    <circle cx="16" cy="15" r="4" fill="#38bdf8" />
+    <text class="tag-text" x="28" y="20">CURATED AI QUANT DIRECTORY</text>
+
+    <!-- Main Title -->
+    <text class="title-text" x="0" y="78">
+      Quantitative Finance &amp;
+    </text>
+    <text class="title-text" x="0" y="124" fill="url(#teal-cyan)">
+      Algorithmic Trading AI ⚡
+    </text>
+
+    <!-- Subtitle / Meta Description -->
+    <text class="subtitle-text" x="0" y="165">
+      The definitive ecosystem of SaaS platforms, automated trading bots,
+    </text>
+    <text class="subtitle-text" x="0" y="190">
+      backtesting engines, multi-agent LLM quants, and DRL financial models.
+    </text>
+
+    <!-- Feature Attribute Badges -->
+    <g transform="translate(0, 222)">
+      <!-- Pill 1 -->
+      <rect width="138" height="28" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="18" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">🤖 LLM Quant Agents</text>
+
+      <!-- Pill 2 -->
+      <rect x="148" y="0" width="138" height="28" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="160" y="18" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">📊 Event &amp; Vector BT</text>
+
+      <!-- Pill 3 -->
+      <rect x="296" y="0" width="148" height="28" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="308" y="18" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">⚡ Low-Latency APIs</text>
+
+      <!-- Pill 4 -->
+      <rect x="454" y="0" width="144" height="28" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="466" y="18" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">🧠 Reinforcement DRL</text>
+    </g>
+  </g>
+</svg>
