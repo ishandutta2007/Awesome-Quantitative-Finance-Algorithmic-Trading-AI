@@ -271,3 +271,12 @@ Star the repo if you find it useful!
 **Made for quantitative researchers, algorithmic traders, financial engineers, and AI agent developers.**  
 
 Let's make quantitative finance more transparent, reproducible, and open.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Quantitative-Finance-Algorithmic-Trading-AI&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Quantitative-Finance-Algorithmic-Trading-AI_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Quantitative-Finance-Algorithmic-Trading-AI_growth.svg">
+  </picture>
+</a>
