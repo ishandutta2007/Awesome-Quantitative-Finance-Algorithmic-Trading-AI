@@ -67,7 +67,7 @@ A comprehensive index of open-source algorithmic trading frameworks, LLM financi
 
 ### ⭐ Featured Open-Source Projects
 
-| Stars | Project | Framework Focus | Description |
+| GitHub_Stars | Project | Framework Focus | Description |
 | :---: | :--- | :--- | :--- |
 | [![Stars](https://img.shields.io/github/stars/TauricResearch/TradingAgents?style=social&color=white)](https://github.com/TauricResearch/TradingAgents/stargazers) | **[TradingAgents](https://github.com/TauricResearch/TradingAgents)** | Multi-Agent LLM Quant | Multi-agent LLM financial trading framework simulating quantitative researcher, market analyst, execution trader, and risk manager roles for autonomous market decisions. |
 | [![Stars](https://img.shields.io/github/stars/openbb-finance/OpenBB?style=social&color=white)](https://github.com/openbb-finance/OpenBB/stargazers) | **[OpenBB](https://github.com/openbb-finance/OpenBB)** | Investment Research Terminal | Comprehensive open-source investment research infrastructure aggregating equity, options, macro, crypto, and alternative financial data for Python quants and AI workflows. |
@@ -113,7 +113,7 @@ We welcome contributions from quantitative developers, financial engineers, and 
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch** (`git checkout -b feature/new-quant-tool`).
 3. 📝 **Add your entry** to the appropriate table or section following the existing formatting conventions.
-4. 🔎 **Ensure accuracy**: Include official links, realistic valuation/pricing details, and GitHub star counts.
+4. 🔎 **Ensure accuracy**: Include official links, realistic valuation/pricing details, and GitHub Stars_Counts.
 5. 🚀 **Submit a Pull Request** with a concise description of the tool's relevance to the quant community.
 
 ---
@@ -140,3 +140,12 @@ Thank you to all contributors and community sponsors who make quantitative finan
 
 - This repository is a **community-curated directory** created solely for educational, engineering, and academic research purposes.
 - **Not Financial Advice**: Algorithmic trading and quantitative investing involve substantial risk of financial loss. Backtested strategy performance does not guarantee future results. Always perform thorough risk evaluation, slippage modeling, and regulatory compliance verification prior to deploying real capital.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Quantitative-Finance-Algorithmic-Trading-AI&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Quantitative-Finance-Algorithmic-Trading-AI_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Quantitative-Finance-Algorithmic-Trading-AI_growth.svg">
+  </picture>
+</a>
